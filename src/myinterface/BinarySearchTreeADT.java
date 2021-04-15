@@ -1,12 +1,14 @@
 package myinterface;
 
-public interface BinarySearchTreeADT<E extends Comparable<E>> {
-    void insert(E data);
-    boolean search(E searchElement);
-    void inOrder(Node<E> node);
-    void preOrder(Node<E> node);
-    void postOrder(Node<E> node);
-    void reverseInOrder(Node<E> node);
-    void delete(E data);
-    int height(Node<E> node);
+import implementation.BSTNode;
+
+public interface BinarySearchTreeADT<T extends Comparable<T>> {
+    void insert(T data);
+    boolean search(T searchElement);
+    void inOrder(BSTNode<T> node);
+    void preOrder(BSTNode<T> node);
+    void postOrder(BSTNode<T> node);
+    void reverseInOrder(BSTNode<T> node);
+    void delete(T data);
+    int height(BSTNode<T> node);
 }
